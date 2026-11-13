@@ -25,6 +25,8 @@ services:
       KC_DB_PASSWORD: ${POSTGRES_PASSWORD}
     depends_on:
       - keycloak_postgres
+    volumes:
+      - ~/proelectricos-theme:/opt/keycloak/themes/proelectricos  
     networks:
       - keycloak-network
     command:
